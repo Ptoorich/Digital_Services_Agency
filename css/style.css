@@ -229,67 +229,49 @@ ul { list-style: none; }
   background: rgba(200, 169, 110, 0.08);
 }
 
-.nav-socials-item {
-  position: relative;
-}
+/* ---------- SOCIALS SECTION ---------- */
+.socials { background: var(--dark); }
 
-.nav-socials-btn {
-  display: flex;
-  align-items: center;
-}
-
-/* Socials Dropdown */
-.socials-dropdown {
-  display: none;
-  position: absolute;
-  top: 64px;
-  right: 0;
-  left: 0;
-  background: var(--darker);
-  border-bottom: 1px solid var(--mid);
-  padding: 24px;
-  z-index: 1000;
-}
-
-.socials-dropdown.open {
-  display: block;
-}
-
-.socials-dropdown-inner {
-  max-width: 1200px;
+.socials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 700px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
 }
 
-.socials-dropdown a {
+.social-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  color: var(--grey);
-  padding: 12px 20px;
-  border-radius: var(--radius);
-  transition: all var(--transition);
+  gap: 10px;
+  padding: 32px 20px;
+  background: var(--darker);
   border: 1px solid var(--mid);
-  min-width: 110px;
+  border-radius: var(--radius-lg);
+  color: var(--grey);
+  transition: all var(--transition);
 }
 
-.socials-dropdown a:hover {
-  color: var(--gold);
+.social-card:hover {
   border-color: var(--gold);
-  background: rgba(200, 169, 110, 0.08);
-  transform: translateY(-2px);
+  color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(200, 169, 110, 0.1);
 }
 
-.socials-dropdown a i {
-  font-size: 1.6rem;
+.social-card i {
+  font-size: 2rem;
 }
 
-.socials-dropdown a span {
-  font-size: 0.8rem;
-  font-weight: 500;
+.social-card span {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.social-card small {
+  font-size: 0.75rem;
+  color: #555;
 }
 
 /* ---------- HERO ---------- */
@@ -913,6 +895,8 @@ ul { list-style: none; }
    TABLET — 768px+
    ============================================ */
 @media (min-width: 768px) {
+  .nav-toggle { display: none; }
+
   .section { padding: 100px 0; }
 
   .section-title { font-size: 2.5rem; }

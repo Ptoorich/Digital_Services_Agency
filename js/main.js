@@ -25,24 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
       navToggle.classList.remove('active');
       navMenu.classList.remove('open');
-      socialsDropdown.classList.remove('open');
-    }
-  });
-
-  // ---------- SOCIALS DROPDOWN ----------
-  const socialsBtn = document.getElementById('socialsBtn');
-  const socialsDropdown = document.getElementById('socialsDropdown');
-
-  socialsBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    socialsDropdown.classList.toggle('open');
-    navMenu.classList.remove('open');
-    navToggle.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!socialsDropdown.contains(e.target) && !socialsBtn.contains(e.target)) {
-      socialsDropdown.classList.remove('open');
     }
   });
 
@@ -241,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.service-card, .pricing-card, .gallery-item, .info-card').forEach(el => {
+  document.querySelectorAll('.service-card, .pricing-card, .gallery-item, .info-card, .social-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
